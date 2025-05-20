@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/mp-fevicon.png" type="image/x-icon">
+    
+</head>
+
+<body>
+    <div class="main-div">
+
+        <div class="nav-bar">
+            <div class="icons-div">
+                <ion-icon name="home-sharp" style="color: white;"></ion-icon>
+                <ion-icon name="grid"  id="list"></ion-icon>
+                <div class="song-list" id="songList">
+                    <h5 id="listHeading">Songs List</h5>
+                    <ul>
+                      <li data-index="0">Position <br><span>Ariana Grande</span></li>
+                      <li data-index="1">Starboy <br><span>The Weekend,Draft Punk</span></li>
+                      <li data-index="2">Harleys In Hawaii <br><span>Katy Perry</span></li>
+                      <li data-index="3">Attention <br><span>Katy Perry</span></li>
+                      
+                    </ul>
+                  </div>
+
+            </div>
+            <div class="temp-div">
+                24°C
+            </div>
+
+        </div>
+
+        <div class="hero-section">
+            <div class="first-div">
+
+                <div class="iconsBar">
+                 <ion-icon name="wifi-sharp"></ion-icon>
+                 <ion-icon name="battery-full-sharp"></ion-icon>
+                 <ion-icon name="bluetooth"></ion-icon>
+                </div>
+                <div id="realTime"></div>
+
+            </div>
+            <div class="second-div">
+                <div class="imageDiv">
+                    <img id="songImage" src="images/mainImg.png" alt="Image">
+                </div>
+                <div class="songDetailsDiv">
+
+                 
+                  
+                            <div>
+                                <div id="songTitle">Loading...</div>
+                                <div id="singerName"></div>
+
+                            </div>
+                            <div>
+                                <input type="range" id="progressBar" value="0" />
+                                <div id="time">00:00/00:00</div>
+                            
+                                <audio id="audio" preload="metadata"></audio>
+
+                            </div>
+                            <div class="button-div">
+                                <button id="prevBtn"><ion-icon name="play-skip-back-sharp"></ion-icon></button>
+                            
+                                <button id="playBtn">
+                                    <ion-icon id="playIcon" name="play-sharp"></ion-icon>
+                                </button>
+                            
+                                <button id="nextBtn"><ion-icon name="play-skip-forward-sharp"></ion-icon></button>
+                            </div>
+                            
+                     </div>
+                   </div>
+                 </div>
+
+    </div>
+    <script src="script.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
